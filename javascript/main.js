@@ -3,7 +3,7 @@
 var button = document.querySelector(".js-go");
 button.addEventListener('click', function(){
     var input = document.querySelector("input").value;
-    pushToDOM(input);
+    searchGIF(input);
 });
 
 document.querySelector(".js-userinput").addEventListener('keyup', function(e){
