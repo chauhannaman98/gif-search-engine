@@ -37,9 +37,13 @@ function searchGIF(input)   {
 function pushToDOM(input)    {
     var response = JSON.parse(input);
 
-    var imageURL = response.data[0].images.fixed_height.url;
-    console.log(imageURL);
+    var imageURLs = response.data;
 
-    var container = document.querySelector(".js-container");
-    container.innerHTML = "<img src=\"" + imageURL + "\">";
+    imageURLs.forEach(function(image){
+        var src = image.images.fixed_height.url;
+        console.log(src);
+    
+        var container = document.querySelector(".js-container");
+        container.innerHTML += "<img src=\"" + src + "\" class=\"container-image\">";
+    });
 }
