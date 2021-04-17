@@ -35,6 +35,10 @@ function searchGIF(input)   {
 
 /* 3. Show me the GIFs */
 function pushToDOM(input)    {
+    // clear old gifs
+    var container = document.querySelector(".js-container");
+    container.innerHTML = "";
+
     var response = JSON.parse(input);
 
     var imageURLs = response.data;
