@@ -3,13 +3,11 @@
 var button = document.querySelector(".js-go");
 button.addEventListener('click', function(){
     var input = document.querySelector("input").value;
-    console.log(input);
     pushToDOM(input);
 });
 
 document.querySelector(".js-userinput").addEventListener('keyup', function(e){
     var input = document.querySelector("input").value;
-    console.log(input);
 
     // if the key ENTER is pressed ...
     if(e.which === 13)    {
@@ -45,7 +43,7 @@ function pushToDOM(input)    {
 
     imageURLs.forEach(function(image){
         var src = image.images.fixed_height.url;
-        console.log(src);
+        // console.log(src);
     
         var container = document.querySelector(".js-container");
         container.innerHTML += "<img src=\"" + src + "\" class=\"container-image\">";
